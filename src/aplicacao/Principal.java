@@ -1,6 +1,6 @@
-package apliccation;
+package aplicacao;
 
-import chess.PartidaXadrez;
+import xadrez.PartidaXadrez;
 
 public class Principal {
 
