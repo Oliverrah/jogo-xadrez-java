@@ -9,6 +9,5 @@ public class Principal {
 		PartidaXadrez partidaXadrez = new PartidaXadrez();
 		UI.imprimeTabuleiro(partidaXadrez.getPecas());
 		
-		
 	}
 }
