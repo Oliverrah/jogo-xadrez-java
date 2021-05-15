@@ -8,7 +8,7 @@ public class Tabuleiro {
 
 	public Tabuleiro(int linhas, int colunas) {
 		if (linhas < 1 || colunas < 1) {
-			throw new TabuleiroException("Erro ao criar tabuleiro: deve conter no mínimo 1 linha e 1 column");
+			throw new TabuleiroException("Erro ao criar tabuleiro: deve conter no mínimo 1 linha e 1 coluna");
 		}
 		this.linhas = linhas;
 		this.colunas = colunas;
@@ -44,8 +44,24 @@ public class Tabuleiro {
 		pecas[posicao.getLinha()][posicao.getColuna()] = peca;
 		peca.posicao = posicao;
 	}
+	
+	public Peca removePeca(Posicao posicao) {
+		if(!existeEssaPosicao(posicao)) {
+			throw new TabuleiroException("Não há essa posição no tabuleiro");
+		}
+		if(peca(posicao) == null) {
+			return null;
+		}
+		Peca aux = peca(posicao);
+		aux.posicao = null;
+		pecas[posicao.getLinha()][posicao.getColuna()] = null;
+		return aux;
+	}
 
 	private boolean existeEssaPosicao(int linha, int coluna) {
+		
+		/*retorna true ou false levando em conta se a linha e coluna são maiores 
+		que zero e menor que que a linha e coluna do tabuleiro*/
 		return linha >= 0 && linha < linhas && coluna >= 0 && coluna < colunas;
 	}
 
