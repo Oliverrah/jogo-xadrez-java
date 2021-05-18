@@ -19,7 +19,7 @@ public class Principal {
 			
 			try {
 				UI.limparTela();
-				UI.imprimeTabuleiro(partidaXadrez.getPecas());
+				UI.imprimePartida(partidaXadrez);
 				System.out.println();
 				System.out.print("Origem: ");
 				PosicaoXadrez origem = UI.lerPosicaoXadrez(sc);
