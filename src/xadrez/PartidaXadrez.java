@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import tabuleirojogo.Peca;
 import tabuleirojogo.Posicao;
 import tabuleirojogo.Tabuleiro;
+import xadrex.pecas.Peao;
 import xadrex.pecas.Rei;
 import xadrex.pecas.Torre;
 
@@ -195,12 +196,29 @@ public class PartidaXadrez {
 	}
 	
 	private void setupInicial() {
-		colocarNovaPeca('h', 7, new Torre(tabuleiro, Cor.BRANCA));
-		colocarNovaPeca('d', 1, new Torre(tabuleiro, Cor.BRANCA));
-		colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCA));
-		
-		colocarNovaPeca('b', 8, new Torre(tabuleiro,Cor.PRETA));
-		colocarNovaPeca('a', 8, new Rei(tabuleiro,Cor.PRETA));
+        colocarNovaPeca('a', 1, new Torre(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('h', 1, new Torre(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('a', 2, new Peao(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('b', 2, new Peao(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('c', 2, new Peao(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('d', 2, new Peao(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('e', 2, new Peao(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('f', 2, new Peao(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('g', 2, new Peao(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('h', 2, new Peao(tabuleiro, Cor.BRANCA));
+
+        colocarNovaPeca('a', 8, new Torre(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('e', 8, new Rei(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('h', 8, new Torre(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('a', 7, new Peao(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('b', 7, new Peao(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('c', 7, new Peao(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('d', 7, new Peao(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('e', 7, new Peao(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('f', 7, new Peao(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('g', 7, new Peao(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('h', 7, new Peao(tabuleiro, Cor.PRETA));
 	}
 
 }
