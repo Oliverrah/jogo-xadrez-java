@@ -39,6 +39,12 @@ public class Principal {
 				if(pecaCapturada != null) {
 					capturadas.add(pecaCapturada);
 				}
+				
+				if (partidaXadrez.getPromocao() != null) {
+					System.out.println("Digite a peca para promocao (B, C, T, D): ");
+					String tipo = sc.nextLine();
+					partidaXadrez.trocarPecaPromovida(tipo);
+				}
 			}
 			catch(XadrezException e) {
 				System.out.println(e.getMessage());
